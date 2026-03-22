@@ -23,7 +23,7 @@ COPY --from=build /app/out ./out
 COPY --from=build /app/postgresql.jar ./postgresql.jar
 
 # Mở port (nếu server dùng)
-EXPOSE 8080
+EXPOSE 2001
 
 # Chạy chương trình
 ENTRYPOINT ["java", "-cp", "out:postgresql.jar", "Server1.NewServer1"]
