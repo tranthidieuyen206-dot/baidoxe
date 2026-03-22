@@ -24,6 +24,7 @@ COPY --from=build /app/postgresql.jar ./postgresql.jar
 
 # Mở port (nếu server dùng)
 EXPOSE 2001
+HEALTHCHECK NONE
 
 # Chạy chương trình
 ENTRYPOINT ["java", "-cp", "out:postgresql.jar", "Server1.NewServer1"]
